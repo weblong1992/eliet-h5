@@ -1,8 +1,8 @@
 let baseURL = "";
 if (process.env.VUE_APP_BASE_NAME === "test") {
-  baseURL = "https://api.lietkid.com.cn";
+  baseURL = "https://api.elietkid.com.cn";
 } else if (process.env.VUE_APP_BASE_NAME === "production") {
-  baseURL = "https://api.lietkid.com.cn";
+  baseURL = "https://api.elietkid.com.cn";
 } else {
   console.log(process.env.VUE_APP_BASE_NAME);
   // 开发环境
