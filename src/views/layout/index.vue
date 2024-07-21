@@ -103,7 +103,7 @@
           /> -->
         <div class="btnbox">
           <el-button size="mini" class="toget" @click="ljlq"
-            >立即领取</el-button
+            >立即开启</el-button
           >
         </div>
       </div>

@@ -20,6 +20,21 @@
       </div>
     </div>
 
+    <!-- 用户协议和隐私协议 -->
+    <div class="xyBox">
+      <!-- `checked` 为 true 或 false -->
+      <div>
+        <el-input v-model="phone" placeholder="请输入您的手机号" />
+      </div>
+      <div class="yxTxt">
+        <el-checkbox v-model="checked"></el-checkbox>
+        <span class="ml-5">我已阅读并同意</span>
+        <span class="mycolor">ELIET ENGLISH用户协议</span>
+        <b>和</b>
+        <span class="mycolor">隐私政策</span>
+      </div>
+    </div>
+
     <div class="aboutWe">
       <div class="title">
         <div>关于我们</div>
@@ -162,7 +177,7 @@
        -->
 
         <div class="ljlq">
-          <div class="ljlq_inner" @click="ljlq">立即领取</div>
+          <div class="ljlq_inner" @click="ljlq">立即开启</div>
         </div>
       </div>
     </div>
@@ -200,6 +215,7 @@ export default {
   components: {},
   data() {
     return {
+      checked: false,
       dialogVisible: false,
       setWidth: document.documentElement.clientWidth,
       phone: "",
@@ -289,10 +305,30 @@ export default {
     }
   }
 
-  .aboutWe {
-    padding-top: 120px;
+  .xyBox {
+    margin-top: 120px;
     padding: 0 20px;
-    // margin-top: ;
+
+    .yxTxt {
+      display: flex;
+      align-items: center;
+      font-size: 12px;
+      margin-top: 10px;
+
+      .ml-5 {
+        margin-left: 5px;
+      }
+
+      .mycolor {
+        color: $mainColor;
+      }
+    }
+  }
+  .aboutWe {
+    padding: 0 20px;
+    // padding-top: 120px;
+    padding-top: 60px;
+
     & .title {
       display: flex;
       flex-direction: column;

@@ -31,7 +31,7 @@ module.exports = {
   // 支持webPack-dev-server的所有选项(https://webpack.js.org/configuration/dev-server/)
   devServer: {
     host: "0.0.0.0",
-    port: 8080, // 端口号
+    port: 8090, // 端口号
     https: false, // https:{type:Boolean}
     open: true, //配置自动启动浏览器
     // 设置请求头
