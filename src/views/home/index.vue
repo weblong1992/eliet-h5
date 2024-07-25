@@ -21,8 +21,8 @@
     </div>
 
     <!-- 用户协议和隐私协议 -->
-    <div class="xyBox">
-      <!-- `checked` 为 true 或 false -->
+    <!-- <div class="xyBox">
+      
       <div>
         <el-input v-model="phone" placeholder="请输入您的手机号" />
       </div>
@@ -33,7 +33,7 @@
         <b>和</b>
         <span class="mycolor">隐私政策</span>
       </div>
-    </div>
+    </div> -->
 
     <div class="aboutWe">
       <div class="title">
@@ -204,7 +204,7 @@
       <div class="kfrx_right">
         <div class="tit">官方公众号</div>
         <div class="pic">
-          <img src="~@/assets/image/main/gzh.jpg" />
+          <img src="~@/assets/image/main/gzh_new.jpg" />
         </div>
       </div>
     </div>
@@ -252,7 +252,7 @@ export default {
     //   this.$store.commit("setRegisterDia", true);
     // },
   },
-  created() {},
+  // created() {},
 };
 </script>
 <style lang="scss" scoped>
@@ -305,29 +305,30 @@ export default {
     }
   }
 
-  .xyBox {
-    margin-top: 120px;
-    padding: 0 20px;
+  // .xyBox {
 
-    .yxTxt {
-      display: flex;
-      align-items: center;
-      font-size: 12px;
-      margin-top: 10px;
+  //   margin-top: 120px;
+  //   padding: 0 20px;
 
-      .ml-5 {
-        margin-left: 5px;
-      }
+  //   .yxTxt {
+  //     display: flex;
+  //     align-items: center;
+  //     font-size: 12px;
+  //     margin-top: 10px;
 
-      .mycolor {
-        color: $mainColor;
-      }
-    }
-  }
+  //     .ml-5 {
+  //       margin-left: 5px;
+  //     }
+
+  //     .mycolor {
+  //       color: $mainColor;
+  //     }
+  //   }
+  // }
   .aboutWe {
     padding: 0 20px;
     // padding-top: 120px;
-    padding-top: 60px;
+    padding-top: 100px;
 
     & .title {
       display: flex;
@@ -491,7 +492,7 @@ export default {
 
     & .operate {
       position: absolute;
-      left: 20px;
+      left: 24px;
       margin-top: -40px;
 
       & /deep/ .el-input__inner {

@@ -14,7 +14,7 @@ export default {
 html,
 body,
 #app {
-  height: 100%;
+  // height: 100%;
   width: 100%;
 }
 
