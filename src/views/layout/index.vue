@@ -224,8 +224,13 @@ export default {
       handler: function (newVal, oldVal) {
         if (newVal) {
           this.dialogVisible = true;
-          if (this.$store.state.phone) {
-            this.form.phone = this.$store.state.phone;
+          this.form.phone = this.$store.state.phone;
+
+          if (!this.$store.state.phone) {
+            if (this.form.name || this.form.code) {
+              this.form.name = "";
+              this.form.code = "";
+            }
           }
         }
       },
@@ -371,26 +376,26 @@ export default {
     },
     ljlq() {
       this.$store.commit("setRegisterDia", true);
+      this.$store.commit("setPhone", "");
     },
-
-    open() {
-      if (this.form.phone && this.form.phone.length === 11) {
-        this.$store.commit("setRegisterDia", true);
-        this.$store.commit("setPhone", this.form.phone);
-      } else {
-        if (!this.form.phone) {
-          this.$message({
-            message: "请输入手机号",
-            type: "warning",
-          });
-        } else if (this.form.phone.length < 11 && this.form.phone.length > 0) {
-          this.$message({
-            message: "手机号位数不正确",
-            type: "warning",
-          });
-        }
-      }
-    },
+    // open() {
+    //   if (this.form.phone && this.form.phone.length === 11) {
+    //     this.$store.commit("setRegisterDia", true);
+    //     this.$store.commit("setPhone", this.form.phone);
+    //   } else {
+    //     if (!this.form.phone) {
+    //       this.$message({
+    //         message: "请输入手机号",
+    //         type: "warning",
+    //       });
+    //     } else if (this.form.phone.length < 11 && this.form.phone.length > 0) {
+    //       this.$message({
+    //         message: "手机号位数不正确",
+    //         type: "warning",
+    //       });
+    //     }
+    //   }
+    // },
     agreement(num) {
       console.log(num);
       this.num = num;
@@ -399,6 +404,19 @@ export default {
     handleColse() {
       this.successDiaFlag = false;
     },
+  },
+  mounted() {
+    // let mm =
+    //   document.documentElement.scrollTop ||
+    //   window.pageYOffset ||
+    //   document.body.scrollTop;
+    // mm.scrollTop = 0;
+    // setTimeout(() => {
+    //   window.scrollTo(0, 0);
+    // });
+    // window.scrollTo(0, 0);
+    // document.body.scrollTo(0, 0);
+    // 移动端;
   },
 };
 </script>

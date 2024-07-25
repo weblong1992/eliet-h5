@@ -245,6 +245,7 @@ export default {
     // },
     ljlq() {
       this.$store.commit("setRegisterDia", true);
+      this.$store.commit("setPhone", "");
       // this.open();
     },
     // ljkq() {

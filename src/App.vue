@@ -7,6 +7,15 @@
 <script>
 export default {
   name: "App",
+  mounted() {
+    window.addEventListener("beforeunload", this.fn);
+  },
+  methods: {
+    fn() {
+      //回到顶部
+      window.scrollTo(0, 0);
+    },
+  },
 };
 </script>
 
