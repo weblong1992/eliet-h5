@@ -5,11 +5,11 @@
     </div>
 
     <div class="xxfw">
-      <div class="desc">
+      <!-- <div class="desc">
         <p>风靡欧美精英圈层的</p>
         <p>定制化学习服务</p>
         <p>专业品质 私奢服务</p>
-      </div>
+      </div> -->
 
       <div class="bottom_bg">
         <p>首创定制化英语学习模式</p>
@@ -183,9 +183,10 @@
     </div>
 
     <!-- 客服热线 -->
-    <div class="kfrx">
-      <div class="kfrx_left">
-        <!-- <div class="kfrx_txt">客服热线</div>
+    <div class="kfrxBox">
+      <div class="kfrx">
+        <div class="kfrx_left">
+          <!-- <div class="kfrx_txt">客服热线</div>
         <div class="line_bar">
           <img src="~@/assets/image/main/line_bar.png" width="32" />
         </div>
@@ -196,17 +197,26 @@
           <div class="phone_txt">010-00000000</div>
         </div> -->
 
-        <div class="worktime">周一至周日08：00-22：00</div>
+          <div class="zxzx zxzxTxt">在线咨询</div>
 
-        <div class="zxzx">在线咨询</div>
-      </div>
+          <div class="wxsys">
+            <div>
+              <img src="~@/assets/image/common/zxzx_new.jpg" width="150" />
+            </div>
 
-      <div class="kfrx_right">
-        <div class="tit">官方公众号</div>
-        <div class="pic">
-          <img src="~@/assets/image/main/gzh_new.jpg" />
+            <!-- <div>打开微信扫一扫即可报名～</div> -->
+          </div>
+        </div>
+
+        <div class="kfrx_right">
+          <div class="tit">官方公众号</div>
+          <div class="pic">
+            <img src="~@/assets/image/main/gzh_new.jpg" />
+          </div>
         </div>
       </div>
+
+      <div class="workTime">周一至周日08:00-22:00</div>
     </div>
   </div>
 </template>
@@ -268,11 +278,14 @@ export default {
   }
 
   .xxfw {
-    height: 600px;
-    background-image: url("~@/assets/image/main/bgyy.png"),
-      url("~@/assets/image/main/bg.png");
+    height: 720px;
+    // height: 700px;
+    // background-image: url("~@/assets/image/main/bgyy.png"),
+    //   url("~@/assets/image/main/bg.jpg");
+    background-image: url("~@/assets/image/main/bg.jpg");
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100% 580px;
+    // background-size: cover;
     position: relative;
 
     & .desc {
@@ -291,7 +304,9 @@ export default {
       background-repeat: no-repeat;
       background-size: cover;
       position: absolute;
-      bottom: -70px;
+      // bottom: -70px;
+      bottom: 50px;
+
       left: 50%;
       transform: translateX(-50%);
       display: flex;
@@ -329,7 +344,7 @@ export default {
   .aboutWe {
     padding: 0 20px;
     // padding-top: 120px;
-    padding-top: 100px;
+    // padding-top: 100px;
 
     & .title {
       display: flex;
@@ -493,7 +508,7 @@ export default {
 
     & .operate {
       position: absolute;
-      left: 24px;
+      left: 18px;
       margin-top: -40px;
 
       & /deep/ .el-input__inner {
@@ -532,8 +547,7 @@ export default {
     padding-left: 20px;
     padding-right: 20px;
     padding-top: 20px;
-    padding-bottom: 60px;
-    background-color: #000000;
+    // padding-bottom: 200px;
 
     .kfrx_left {
       display: flex;
@@ -553,27 +567,31 @@ export default {
         }
       }
 
-      .worktime {
-        font-size: 12px;
-        color: #ccc;
-      }
-
-      .zxzx {
-        width: 95px;
-        height: 27px;
-        margin-top: 20px;
-        background-image: url("~@/assets/image/main/btn.png");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+      .zxzxTxt {
         color: #fff;
       }
+
+      // .zxzx {
+
+      //   width: 95px;
+      //   height: 27px;
+      //   margin-top: 20px;
+      //   background-image: url("~@/assets/image/main/btn.png");
+      //   background-repeat: no-repeat;
+      //   background-size: 100% 100%;
+      //   display: flex;
+      //   justify-content: center;
+      //   align-items: center;
+      //   color: #fff;
+      // }
     }
 
     .kfrx_right {
       color: #fff;
+      .tit {
+        display: flex;
+        justify-content: center;
+      }
 
       .pic {
         & > img {
@@ -582,6 +600,17 @@ export default {
         }
       }
     }
+  }
+
+  .kfrxBox {
+    background-color: #000000;
+
+    .workTime {
+      color: #fff;
+      margin-bottom: 60px;
+      padding-left: 10px;
+    }
+    // padding-bottom: 100px;
   }
 }
 </style>
