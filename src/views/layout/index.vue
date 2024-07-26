@@ -134,7 +134,7 @@
           top="20vh"
           title="注册成功"
           :visible="successDiaFlag"
-          width="90%"
+          width="96%"
           @close="handleColse"
         >
           <div class="img_box">
@@ -280,14 +280,15 @@ export default {
         return;
       }
 
+      this.getCode();
       this.sendAuthCode = false;
       this.auth_time = 60;
-      let auth_timetimer = setInterval(() => {
+
+      let auth_timetimer = window.setInterval(() => {
         this.auth_time--;
-        this.getCode();
         if (this.auth_time <= 0) {
           this.sendAuthCode = true;
-          clearInterval(auth_timetimer);
+          window.clearInterval(auth_timetimer);
         }
       }, 1000);
     },
@@ -404,19 +405,6 @@ export default {
     handleColse() {
       this.successDiaFlag = false;
     },
-  },
-  mounted() {
-    // let mm =
-    //   document.documentElement.scrollTop ||
-    //   window.pageYOffset ||
-    //   document.body.scrollTop;
-    // mm.scrollTop = 0;
-    // setTimeout(() => {
-    //   window.scrollTo(0, 0);
-    // });
-    // window.scrollTo(0, 0);
-    // document.body.scrollTo(0, 0);
-    // 移动端;
   },
 };
 </script>
