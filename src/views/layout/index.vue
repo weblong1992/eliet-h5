@@ -208,7 +208,6 @@ export default {
       mobile: "",
       // form.phone: "",
       successDiaFlag: false,
-
       dialogVisible: false,
       innerVisible: false,
       form: {

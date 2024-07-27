@@ -42,11 +42,15 @@
         <div class="line_bar"></div>
       </div>
 
-      <div class="con">
+      <!-- <div class="con">
         Eliet
         Enqlish是一家为全球家庭提供个性化定制英语学习的数智教育平台。公司围绕教育
         服务
         科技三大内核，打破传统课程平台内容的束缚，以个性化学习定制为切入点，构建出一套适合不同孩子的专属语言学习生态圈。以专业的教学品质，满足不同年龄，不同地域，不同文化背景孩子的个性化语言学习要求。
+      </div> -->
+
+      <div class="con">
+        <img src="~@/assets/image/main/gxwm.png" width="330" />
       </div>
 
       <div class="wIcon">
@@ -127,7 +131,7 @@
       <img src="~@/assets/image/main/yxjs.png" :width="setWidth" />
     </div>
 
-    <div class="dzhxx">
+    <!-- <div class="dzhxx">
       <div class="title">
         <div>
           <p>真正的定制化学习</p>
@@ -141,6 +145,10 @@
         打破市面机构传统课程学习方式，根据学员语言基础、兴趣爱好、目标方向定制专属课程发挥每个学员个体的优势
         量身打造最适合的学习计划。
       </div>
+    </div> -->
+
+    <div class="dzhxx_new">
+      <img src="~@/assets/image/main/ppjz.png" :width="setWidth" />
     </div>
 
     <div class="gjtd">
@@ -156,13 +164,14 @@
     </div>
 
     <div class="dzh">
-      <img src="~@/assets/image/main/dzh.png" />
+      <!-- <img src="~@/assets/image/main/dzh.png" :width="setWidth" /> -->
+      <img src="~@/assets/image/main/gjai.png" :width="setWidth" />
     </div>
 
-    <div class="ljkq">
+    <div class="ljkq" @click="ljlq">
       <img src="~@/assets/image/main/ljqk.png" width="344" />
 
-      <div class="txt" @click="ljlq">立即开启 ></div>
+      <div class="txt">立即开启 ></div>
     </div>
 
     <div class="qssk">
@@ -435,22 +444,29 @@ export default {
     margin: 100px 0;
   }
 
-  .dzhxx {
-    padding: 40px 20px;
-    & .title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      font-size: 26px;
+  // .dzhxx {
+  //   padding: 40px 20px;
 
-      & .line_bar {
-        width: 40px;
-        height: 2px;
-        background-color: $mainColor;
-        margin-top: 20px;
-        margin-bottom: 30px;
-      }
-    }
+  //   & .title {
+  //     display: flex;
+  //     flex-direction: column;
+  //     align-items: center;
+  //     font-size: 26px;
+
+  //     & .line_bar {
+  //       width: 40px;
+  //       height: 2px;
+  //       background-color: $mainColor;
+  //       margin-top: 20px;
+  //       margin-bottom: 30px;
+  //     }
+  //   }
+  // }
+
+  .dzhxx_new {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .smfw {
@@ -477,9 +493,9 @@ export default {
     justify-content: center;
     align-items: center;
     margin: 40px 0;
-    & > img {
-      width: 100%;
-    }
+    // & > img {
+    //   width: 100%;
+    // }
   }
 
   .ljkq {
