@@ -138,7 +138,7 @@
           @close="handleColse"
         >
           <div class="img_box">
-            <img src="~@/assets/image/common/success.jpg" />
+            <img src="~@/assets/image/common/success.jpg" width="300" />
           </div>
         </el-dialog>
       </div>
@@ -208,6 +208,7 @@ export default {
       mobile: "",
       // form.phone: "",
       successDiaFlag: false,
+
       dialogVisible: false,
       innerVisible: false,
       form: {
