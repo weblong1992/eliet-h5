@@ -3,6 +3,7 @@
  
 .DS_Store
 node_modules
+eliet-h5
 /dist
  
 # local env files
